@@ -3,13 +3,14 @@
 using namespace std;
 
 int main (int argc, char* argv[] ) {
-	string theme = argv[1];
-
+	
 	if ( argc < 2 ){
 		cout << "Please provide an input for the theme" << endl;
 		return 1;
 	}
-
+	
+	string theme = argv[1];
+	
 	if ( theme == "dark" ){
 		system("dconf write /org/cinnamon/theme/name \"'Mojave-Dark'\"");
 		system("dconf write /org/cinnamon/theme/gtk-theme \"'Mojave-Dark'\""); // works for desktop theme
