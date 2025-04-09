@@ -19,15 +19,15 @@ int main (int argc, char* argv[] ) {
 	string theme = argv[1];
 	
 	if ( theme == "dark" ){
-		(runCommand)("dconf write /org/cinnamon/theme/name \"'Mojave-Dark'\"");
-		(runCommand)("dconf write /org/cinnamon/theme/gtk-theme \"'Mojave-Dark'\""); // works for desktop theme
-		(runCommand)("dconf write /org/cinnamon/desktop/interface/gtk-theme \"'Mojave-Dark'\"");
+		runCommand("dconf write /org/cinnamon/theme/name \"'Mojave-Dark'\"");
+		runCommand("dconf write /org/cinnamon/theme/gtk-theme \"'Mojave-Dark'\""); // works for desktop theme
+		runCommand("dconf write /org/cinnamon/desktop/interface/gtk-theme \"'Mojave-Dark'\"");
 		cout << "Theme Set to dark" << endl;
 	}
 	else if ( theme == "light" ){
-		(runCommand)("dconf write /org/cinnamon/theme/name \"'Mojave-Light'\"");
-		(runCommand)("dconf write /org/cinnamon/theme/gtk-theme \"'Mojave-Light'\""); // works for desktop theme
-		(runCommand)("dconf write /org/cinnamon/desktop/interface/gtk-theme \"'Mojave-Light'\"");
+		runCommand("dconf write /org/cinnamon/theme/name \"'Mojave-Light'\"");
+		runCommand("dconf write /org/cinnamon/theme/gtk-theme \"'Mojave-Light'\""); // works for desktop theme
+		runCommand("dconf write /org/cinnamon/desktop/interface/gtk-theme \"'Mojave-Light'\"");
 		cout << "Theme set to light" << endl;
 	}
 	else {
